@@ -3,7 +3,7 @@ services:
   backend:
     volumes:
       - "./:/app"
-      - "Users/QP/Documents/TAC/.GH-Sen/GGUF/mistral-7b-instruct-v0.2.Q5_K_M.gguf:/app/local_model_path"
+      - "/Users/QP/Documents/TAC/.GH-Sen/GGUF/mistral-7b-instruct-v0.2.Q5_K_M.gguf:/app/local_model_path"
     build:
       context: .
       dockerfile: Dockerfile-gpu 
@@ -25,7 +25,7 @@ services:
     volumes:
       - "./:/app"
       - "${EXTERNAL_RESOURCE_DIR:-./workspace}:/app/ext"
-      - "Users/QP/Documents/TAC/.GH-Sen/GGUF/mistral-7b-instruct-v0.2.Q5_K_M.gguf:/app/local_model_path"
+      - "/Users/QP/Documents/TAC/.GH-Sen/GGUF/mistral-7b-instruct-v0.2.Q5_K_M.gguf:/app/local_model_path"
     build:
       context: .
       dockerfile: Dockerfile-gpu 
